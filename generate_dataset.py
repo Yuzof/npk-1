@@ -6,7 +6,7 @@ from scipy.integrate import quad, cumtrapz
 
 import matplotlib.pyplot as plt
 
-import librosa
+# import librosa
 
 class GenerateSignal():
   def __init__(self):

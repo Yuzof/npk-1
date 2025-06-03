@@ -5,9 +5,9 @@ import datetime
 from sklearn.gaussian_process import GaussianProcessRegressor
 from sklearn.gaussian_process.kernels import DotProduct, WhiteKernel,  Matern, ExpSineSquared, RBF
 from matrixprofile import *
-from scipy.signal import medfilt
+#from scipy.signal import medfilt
 
-import matplotlib.pyplot as plt
+# import matplotlib.pyplot as plt
 
 class DetectAnomaly():
   def __init__(self):
@@ -94,17 +94,17 @@ def get_intervals(time_line, rpm_line, speed_line, distance_line):
   return [[time_line[ans[0]]],
           [time_line[ans[1]]]]
 
-if __name__ == '__main__':
-  import matplotlib.pyplot as plt
+# if __name__ == '__main__':
+#   import matplotlib.pyplot as plt
 
-  a = np.linspace(0, 2*np.pi * 10, 2000)
-  b = np.sin(a)
+#   a = np.linspace(0, 2*np.pi * 10, 2000)
+#   b = np.sin(a)
 
-  b[1000:1050] += np.sin(b[1000:1050])
+#   b[1000:1050] += np.sin(b[1000:1050])
 
-  mp = DetectAnomaly.MatrixProfile(a, b)
-  mp_adj = np.append(mp[0],np.zeros(32-1)+np.nan)
+#   mp = DetectAnomaly.MatrixProfile(a, b)
+#   mp_adj = np.append(mp[0],np.zeros(32-1)+np.nan)
 
-  plt.plot(b)
-  plt.plot(mp_adj)
-  plt.show()
+#   plt.plot(b)
+#   plt.plot(mp_adj)
+#   plt.show()
